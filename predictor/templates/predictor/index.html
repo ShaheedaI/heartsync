@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HeartSync - Heart Disease Prediction</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Background Image & Overlay */
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+    /* Dark Overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.55);
+      z-index: 0;
+    }
+
+    /* Form container */
+    .form-container {
+      position: relative;
+      z-index: 1;
+      max-width: 480px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      color: #fff;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+
+    /* Header */
+    .form-container h1 {
+      font-weight: 800;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #ff6b6b;
+      text-align: center;
+      text-shadow: 0 0 8px #ff6b6b;
+    }
+    /* Heart icon next to header */
+    .form-container .heart-icon {
+      font-size: 2.8rem;
+      vertical-align: middle;
+      margin-right: 0.6rem;
+      color: #ff6b6b;
+      text-shadow: 0 0 10px #ff6b6b;
+    }
+
+    /* Form labels and inputs */
+    label {
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-top: 1rem;
+      color: #ffeaea;
+      text-shadow: 0 0 4px rgba(0,0,0,0.5);
+    }
+    input.form-control {
+      border-radius: 12px;
+      border: none;
+      padding: 0.75rem 1rem;
+      font-size: 1.1rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.3);
+      transition: background-color 0.3s ease;
+    }
+    input.form-control:focus {
+      background: rgba(255, 255, 255, 0.4);
+      color: #000;
+      outline: none;
+      box-shadow: 0 0 8px #ff6b6b;
+    }
+
+    /* Submit button */
+    .btn-submit {
+      margin-top: 2rem;
+      background: #ff6b6b;
+      border: none;
+      width: 100%;
+      padding: 0.9rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      border-radius: 50px;
+      color: white;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.7);
+      transition: background-color 0.3s ease;
+    }
+    .btn-submit:hover {
+      background: #ff4c4c;
+      box-shadow: 0 6px 20px rgba(255, 76, 76, 0.9);
+      color: white;
+    }
+
+    /* Responsive text */
+    @media (max-width: 576px) {
+      .form-container h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Footer text */
+    .footer-text {
+      text-align: center;
+      margin-top: 1rem;
+      color: #eee;
+      font-size: 0.9rem;
+      user-select: none;
+      text-shadow: 0 0 3px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container shadow-lg">
+    <h1><span class="heart-icon">❤️</span> HeartSync Prediction</h1>
+
+    <form method="POST" action="/">
+      {% csrf_token %}
+      
+      <label for="age">Age</label>
+      <input type="number" min="0" max="120" id="age" name="age" class="form-control" required placeholder="Enter your age" />
+
+      <label for="cholesterol">Cholesterol Level (mg/dL)</label>
+      <input type="number" min="100" max="400" id="cholesterol" name="cholesterol" class="form-control" required placeholder="e.g. 180" />
+
+      <label for="blood_pressure">Blood Pressure (mm Hg)</label>
+      <input type="number" min="60" max="200" id="blood_pressure" name="blood_pressure" class="form-control" required placeholder="e.g. 120" />
+
+      <label for="max_heart_rate">Max Heart Rate</label>
+      <input type="number" min="60" max="220" id="max_heart_rate" name="max_heart_rate" class="form-control" required placeholder="e.g. 150" />
+
+      <button type="submit" class="btn btn-submit">Predict</button>
+    </form>
+
+    <p class="footer-text">Powered by HeartSync AI ❤️</p>
+  </div>
+
+</body>
+</html>
