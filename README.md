@@ -1,4 +1,4 @@
-\# 🫀 HeartSync – Heart Disease Prediction Web App
+\ 🫀 HeartSync – Heart Disease Prediction Web App
 
 
 
@@ -10,7 +10,7 @@ HeartSync is a Django-based web application that uses a Naive Bayes machine lear
 
 
 
-\## 🚀 Live Preview
+\ 🚀 Live Preview
 
 
 
@@ -22,17 +22,17 @@ HeartSync is a Django-based web application that uses a Naive Bayes machine lear
 
 
 
-\## 📷 Screenshots
+\ 📷 Screenshots
 
 
 
-\### 🧾 Form Page
+\ 🧾 Form Page
 
 !\[Form Screenshot](screenshots/form.png)
 
 
 
-\### 📊 Result Page
+\ 📊 Result Page
 
 !\[Result Screenshot](screenshots/result.png)
 
@@ -42,7 +42,7 @@ HeartSync is a Django-based web application that uses a Naive Bayes machine lear
 
 
 
-\## ⚙️ Features
+\ ⚙️ Features
 
 
 
@@ -62,7 +62,7 @@ HeartSync is a Django-based web application that uses a Naive Bayes machine lear
 
 
 
-\## 🧪 Sample Input (Try this!)
+\ 🧪 Sample Input (Try this!)
 
 
 
