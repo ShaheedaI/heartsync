@@ -237,7 +237,7 @@ Shahida I.
 
 Machine Learning Enthusiast | Software Developer
 
-GitHub: @yourusername
+GitHub: @ShaheedaI
 
 
 
